@@ -1,0 +1,78 @@
+<!--<main class="container mt-5 bg-light">
+  <form [formGroup]="addarticleForm" (ngSubmit)="addArticle()">
+    <div class="row">
+      <h6 class="col-8 text-muted" style="text-align:left">
+        STRONA GŁÓWNA > RODZAJ ARTYKUŁU:
+        <select id="InputTypeId" formControlName="TypeId" required>
+          <option selected hidden disabled>Rodzaj artykułu</option>
+          <option *ngFor="let type of article_types" [ngValue]="type.id">{{type.typeName}}</option>
+        </select>
+        > {{title | uppercase}}
+      </h6>
+      <h6 class="col-4 text-muted text-end">{{today | date: 'd MMMM YYYY, HH:mm':"":"pl"}}</h6>
+    </div>
+    <div class="row pt-2">
+      <h1 class="blog-post-title col-7"><input formControlName="Title" [(ngModel)]="title" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ ]*" type="text" class="form-control" id="InputTitle" placeholder="Podaj tytuł" maxlength="25"></h1>
+      <div style="width: 100%; height: 30px;">
+        <div class="text-danger" *ngIf="addarticleForm.controls['Title'].errors?.['pattern']">Użyty niedozwolony znak</div>
+        <div class="text-danger" *ngIf="addarticleForm.controls['Title'].errors?.['required'] && (addarticleForm.controls['Title'].dirty || addarticleForm.controls['Title'].touched)">Te pole jest wymagane.</div>
+      </div>
+      <p class="blog-post-meta">by <a href="#" class="fw-bold text-decoration-none">Imię Nazwisko</a></p>
+      <p><input formControlName="ShortDescription" type="text" class="form-control" id="InputShortDescription" placeholder="Podaj krótki opis" maxlength="100"></p>
+      <div style="width: 100%; height: 30px;">
+        <div class="text-danger" *ngIf="addarticleForm.controls['ShortDescription'].errors?.['required'] && (addarticleForm.controls['ShortDescription'].dirty || addarticleForm.controls['ShortDescription'].touched)">Te pole jest wymagane.</div>
+      </div>
+    </div>
+    <hr>
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark " style="width: 100%;  height: 300px ">
+      <div class="col-md-2 px-0 m-auto ">
+        <input type="file" id="avatar" name="avatar"accept="image/png, image/jpeg">
+      </div>
+    </div>
+  </form>
+</main>-->
+
+
+
+
+  <div class="container mt-5">
+    <form [formGroup]="addarticleForm" (ngSubmit)="addArticle()">
+
+      <label for="InputTitle" class="form-label">Tytuł artykułu</label>
+      <input formControlName="Title" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ ]*" type="text" class="form-control" id="InputTitle" placeholder="Podaj tytuł" maxlength="25">
+      <div style="width: 100%; height: 30px;">
+        <div class="text-danger" *ngIf="addarticleForm.controls['Title'].errors?.['pattern']">Użyty niedozwolony znak</div>
+        <div class="text-danger" *ngIf="addarticleForm.controls['Title'].errors?.['required'] && (addarticleForm.controls['Title'].dirty || addarticleForm.controls['Title'].touched)">Te pole jest wymagane.</div>
+      </div>
+
+      <label for="InputShortDescription" class="form-label">Krótki opis artykułu</label>
+      <input formControlName="ShortDescription" type="text" class="form-control" id="InputShortDescription" placeholder="Podaj krótki opis" maxlength="100">
+      <div style="width: 100%; height: 30px;">
+        <div class="text-danger" *ngIf="addarticleForm.controls['ShortDescription'].errors?.['required'] && (addarticleForm.controls['ShortDescription'].dirty || addarticleForm.controls['ShortDescription'].touched)">Te pole jest wymagane.</div>
+      </div>
+
+      <label for="InputDescription" class="form-label">Treść artykułu</label>
+      <textarea formControlName="Description" class="form-control" id="InputDescription" rows="4" placeholder="Podaj treść artykułu" style="resize:none;"></textarea>
+      <div style="width: 100%; height: 30px;">
+        <div class="text-danger" *ngIf="addarticleForm.controls['Description'].errors?.['required'] && (addarticleForm.controls['Description'].dirty || addarticleForm.controls['Description'].touched)">Te pole jest wymagane.</div>
+      </div>
+
+
+      <label for="InputType" class="form-label">Rodzaj artykułu</label>
+      <select formControlName="TypeId" id="InputTypeId" class="form-select" required>
+        <option *ngFor="let type of article_types" [ngValue]="type.id">{{type.typeName}}</option>
+      </select>
+
+
+      <div style="width: 100%; height: 30px;">
+      </div>
+
+      <label for="InputGoogleLink" class="form-label">Adres strony z google maps</label>
+      <input formControlName="GoogleLink" type="text" class="form-control" id="InputGoogleLink" placeholder="Wklej link do google">
+      <div style="width: 100%; height: 30px;">
+      </div>
+
+      <button type="submit" class="btn btn-primary text-white">Dodaj artykuł</button>
+      <button type="reset" class="btn btn-primary text-white ms-lg-2">Zresetuj dane</button>
+    </form>
+  </div>

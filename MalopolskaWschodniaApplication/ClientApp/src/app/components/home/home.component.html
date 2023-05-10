@@ -1,0 +1,237 @@
+<!--START NAVBAR-->
+<!--END NAVBAR-->
+<!--START CAROUSEL-->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+</style>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div style="background-image: url(../assets/view4.jpg); width:100%; height:100%; background-size:cover; background-repeat:no-repeat;">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div style="background-image: url(../assets/view5.jpg); width:100%; height:100%; background-size:cover; background-repeat:no-repeat;">
+        </div>
+        <div class="container">
+          <div class="carousel-caption">
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div style="background-image: url(../assets/view6.jpg); width:100%; height:100%; background-size:cover; background-repeat:no-repeat;">
+        </div>
+        <div class="container">
+          <div class="carousel-caption">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--END CAROUSEL-->
+  <!--START TURYSTYKA-->
+
+  <div class="album pb-5">
+    <div class="container d-flex justify-content-center pb-4" style="font-family: 'Noto Sans JP', sans-serif;">
+      <h2>KRAJOBRAZY</h2>
+    </div>
+    <div class="container">
+      <!-- first row-->
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 flex-start">
+
+        <div class="col" *ngFor="let article1 of articles1.slice().reverse() | slice:0:3; let i=index">
+          <a [routerLink]="['/turystyka/' + article1.id]" style="text-decoration: none;">
+            <div class="card shadow-sm" style="height:400px;">
+              <img class="bg-dark" src="../assets/view_{{article1.id}}.jpg" height="225" />
+              <div class="card-body">
+                <div style="height:85%;">
+                  <span class="text-black">
+                    <h3>{{article1.title}}</h3>
+                    <p class="card-text">{{article1.shortDescription}}</p>
+                  </span>
+                </div>
+                <div class="align-items-center w-100 text-end">
+                  <small class="text-decoration-underline">Czytaj dalej..</small>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END TURYSTYKA-->
+  <!--START PRZEPISY-->
+  <div style="background-color: #E6F1FC;">
+    <div class="container marketing">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" style="height:450px;" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active" data-bs-interval="10000">
+
+            <div class="carousel-caption d-none d-md-block">
+
+              <div class="row mx-auto">
+                <div class="container d-flex justify-content-center pb-4" style="font-family: 'Noto Sans JP', sans-serif;">
+                  <h2>HOTELE</h2>
+                </div>
+                <div class="col-lg-4">
+                  <img class="bd-placeholder-img mb-lg-4 rounded-circle" src="../assets/view4.jpg" width="170" height="170" />
+                  <h3 class="">Hotel Arłamów</h3>
+                  <div class="mb-4 text-white rounded stars m-auto" style="background-image: url(../assets/9.png);">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <img class="bd-placeholder-img mb-lg-4 rounded-circle" src="../assets/view4.jpg" width="170" height="170" />
+                  <h3 class="">Hotel Arłamów</h3>
+                  <div class="mb-4 text-white rounded stars m-auto" style="background-image: url(../assets/9.png);">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <img class="bd-placeholder-img mb-lg-4 rounded-circle" src="../assets/view4.jpg" width="170" height="170" />
+                  <h3 class="">Hotel Arłamów</h3>
+                  <div class="mb-4 text-white rounded stars m-auto" style="background-image: url(../assets/9.png);">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="carousel-item" data-bs-interval="2000">
+            <div class="carousel-caption d-none d-md-block">
+
+              <div class="row mx-auto">
+                <div class="container d-flex justify-content-center pb-4" style="font-family: 'Noto Sans JP', sans-serif;">
+                  <h2>HOSTELE</h2>
+                </div>
+                <div class="col-lg-4">
+                  <img class="bd-placeholder-img mb-lg-4 rounded-circle" src="../assets/view4.jpg" width="170" height="170" />
+                  <h3 class="">Hotel Arłamów</h3>
+                  <div class="mb-4 text-white rounded stars m-auto" style="background-image: url(../assets/9.png);">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <img class="bd-placeholder-img mb-lg-4 rounded-circle" src="../assets/view4.jpg" width="170" height="170" />
+                  <h3 class="">Hotel Arłamów</h3>
+                  <div class="mb-4 text-white rounded stars m-auto" style="background-image: url(../assets/9.png);">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <img class="bd-placeholder-img mb-lg-4 rounded-circle" src="../assets/view4.jpg" width="170" height="170" />
+                  <h3 class="">Hotel Arłamów</h3>
+                  <div class="mb-4 text-white rounded stars m-auto" style="background-image: url(../assets/9.png);">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="row mx-auto">
+                <div class="container d-flex justify-content-center pb-4" style="font-family: 'Noto Sans JP', sans-serif;">
+                  <h2>MOTELE</h2>
+                </div>
+                <div class="col-lg-4">
+                  <img class="bd-placeholder-img mb-lg-4 rounded-circle" src="../assets/view4.jpg" width="170" height="170" />
+                  <h3 class="">Hotel Arłamów</h3>
+                  <div class="mb-4 text-white rounded stars m-auto" style="background-image: url(../assets/9.png);">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <img class="bd-placeholder-img mb-lg-4 rounded-circle" src="../assets/view4.jpg" width="170" height="170" />
+                  <h3 class="">Hotel Arłamów</h3>
+                  <div class="mb-4 text-white rounded stars m-auto" style="background-image: url(../assets/9.png);">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <img class="bd-placeholder-img mb-lg-4 rounded-circle" src="../assets/view4.jpg" width="170" height="170" />
+                  <h3 class="">Hotel Arłamów</h3>
+                  <div class="mb-4 text-white rounded stars m-auto" style="background-image: url(../assets/9.png);">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" style="height:450px;" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" style="height:450px;" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Three columns of text below the carousel -->
+    </div>
+  </div>
+  <!--END PRZEPISY-->
+  <div class="album py-5">
+    <div class="container d-flex justify-content-center pb-4" style="font-family: 'Noto Sans JP', sans-serif; ">
+      <h2>TURYSTYKA</h2>
+    </div>
+    <div class="container">
+      <!-- first row-->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../assets/view3.jpg" height="225" />
+            <div class="card-body">
+              <h3>Heading</h3>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center" style="float:right;">
+                <a href="#"><small>Czytaj dalej..</small></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../assets/view2.jpg" height="225" />
+            <div class="card-body">
+              <h3>Heading</h3>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center" style="float:right;">
+                <a href="#"><small>Czytaj dalej..</small></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../assets/view1.jpg" height="225" />
+            <div class="card-body">
+              <h3>Heading</h3>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center" style="float:right;">
+                <a href="#"><small>Czytaj dalej..</small></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+

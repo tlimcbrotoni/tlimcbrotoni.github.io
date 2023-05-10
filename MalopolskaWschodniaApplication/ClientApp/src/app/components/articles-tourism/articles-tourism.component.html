@@ -1,0 +1,84 @@
+<div class="container">
+  <!-- first row-->
+  <!--<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 flex-start">
+
+    <div class="col" *ngFor="let article of articles.slice().reverse()">
+      <a [routerLink]="['/turystyka/' + article.id]" style="text-decoration: none;">
+        <div class="card shadow-sm" style="height:400px;">
+          <img class="bg-dark" src="../assets/view_{{article.id}}.jpg" height="225" />
+          <div class="card-body">
+            <div style="height:85%;">
+              <span class="text-black">
+                <h3>{{article.title}}</h3>
+                <p class="card-text">{{article.shortDescription}}</p>
+              </span>
+            </div>
+            <div class="align-items-center w-100 text-end">
+              <small class="text-decoration-underline">Czytaj dalej..</small>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>-->
+
+
+
+  <div class="row g-5 mt-0">
+
+    <div class="col-lg-auto ">
+      <div class="position-sticky" style="top: 2rem;">
+
+        <a routerLink="/dodaj" class="text-decoration-none bialy">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative btn-primary bg-white">
+            <div class="p-2 text-center text-primary w-100 h-100 btn">
+              <span class="bialy">Dodaj artykuł</span>
+            </div>
+          </div>
+        </a>
+
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mt-3 shadow-sm h-md-250 position-relative bg-white">
+          <div class="p-4">
+            <h4>Typ atrakcji:</h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item ps-0"><a class="text-decoration-none" href="/turystyka/">Krajobraz</a></li>
+              <li class="list-group-item ps-0"><a class="text-decoration-none" href="/turystyka/">Turystyka</a></li>
+              <li class="list-group-item ps-0"><a class="text-decoration-none" href="/turystyka/">Punkt widokowy</a></li>
+              <li class="list-group-item ps-0"><a class="text-decoration-none" href="/turystyka/">Zabytek</a></li>
+              <li class="list-group-item ps-0"><a class="text-decoration-none" href="/turystyka/">Szczyt górski</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 flex-start">
+
+        <div class="col" *ngFor="let article of articles.slice().reverse()">
+          <a [routerLink]="['/turystyka/' + article.id]" style="text-decoration: none;">
+            <div class="card shadow-sm" style="height:400px;">
+              <img class="bg-dark" src="../assets/view_{{article.id}}.jpg" height="225" />
+              <div class="card-body">
+                <div style="height:85%;">
+                  <span class="text-black">
+                    <h3>{{article.title}}</h3>
+                    <p class="card-text">{{article.shortDescription}}</p>
+                  </span>
+                </div>
+                <div class="align-items-center w-100 text-end">
+                  <small class="text-decoration-underline">Czytaj dalej..</small>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
